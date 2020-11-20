@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B10Pagination.html</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="./images/unnamed.jpg" alt="Logo" style="width:100px;">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">홈으로</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">회원제게시판</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">자료실</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">임시Menu</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline" action="/action_page.php">
+      <input type="text" class="form-control" placeholder="검색">
+      <div class="input-group-append">
+        <button type="button" class="btn  bg-white" style=" border: 2.2px solid gray;"><i
+            class='fas fa-search'></i></button>
+      </div>
+      </div>
+    </form>
+    <ul class="navbar-nav ml-auto  ">
+      <li class="nav-item ">
+        <a class="nav-link  " href="#"><i class='fas fa-user-alt'></i>회원가입</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link " href="#"><i class='fas fa-sign-in-alt'></i>로그인</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container-fluid">
+    <br>
+    <div class="row">
+      <div class="col-3">
+        <button type="button" style="height: 100px; font-size: 24px;" class="btn btn-success btn-block">현제메뉴명</button>
+      </div>
+      <div class="col-9">
+        <table>
+          <tr>
+            <td><span style=" font-size: 24px;">게시판 - </span> <span style="color: gray;">이런저런기능이 있는
+                게시판입니다.</span> </td>
+          </tr>
+          <tr >
+            <td class="text-rigth">
+              <li class="list-group-item dropdown-toggle" data-toggle="dropdown"
+                style="margin-left: 415px; cursor: pointer; width: max-content; height:35px;">
+                제목&emsp;&emsp;</td>
+                <td>
+                <form class="form-inline "action="/action_page.php">
+                  <input type="text" class="form-control"  style="margin-left:4px">
+                  <span class="input-group-append  ">
+                    <button type="button" class="btn  bg-white " style=" border: 1px solid rgb(168, 167, 167);"><i class='fas fa-search'></i></button>
+                    </span>
+                </form>
+            </td>
+            </button>
+            <div class="dropdown-menu">
+              <div class="dropdown-header">회원제게시판</div>
+              <a class="dropdown-item" href="#">Q&A</a>
+              <a class="dropdown-item" href="#">GuestBook</a>
+              <!-- 메뉴 구분선 -->
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">비회원제게시판</div>
+              <a class="dropdown-item" href="#">맛집탐방</a>
+              <a class="dropdown-item" href="#">스포츠톡</a>
+              </li>
+              </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <!-- 좌측메뉴영역 -->
+        <!-- 드롭다운 메뉴의 방향을 결정할 때는 드롭다운이 적용된 엘리먼트의
+        부모엘리먼트에 dropright와 같은 속성값을 줘야한다. -->
+        <ul class="list-group drop " >
+          <li class="list-group-item border-0 "><a href="#"> 회원제게시판</a></li>
+          <li class="list-group-item border-0"><a href="#"> 자료실</a>
+          </li>
+          <li class="list-group-item border-0 " >
+            <a class=" dropdown-toggle" data-toggle="dropdown" style="cursor: pointer; " href="#">
+            임시Menu</a>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-9">
+        <!-- 컨텐츠 영역 -->
+        <!-- 게시판리스트부분 -->
+        <table class="table table-bordered table-hover table-striped">
+          <colgroup>
+            <col width="60px" />
+            <col width="*" />
+            <col width="120px" />
+            <col width="120px" />
+            <col width="80px" />
+            <col width="60px" />
+          </colgroup>
+          <thead>
+            <tr style="background-color: #ccebbf; " class="text-center text-dark">
+              <th>번호</th>
+              <th class="text-left">제목</th>
+              <th>작성자</th>
+              <th>작성일</th>
+              <th>조회수</th>
+              <th>첨부</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <%for(int i=1 ; i<=5 ; i++){ %> -->
+            <!-- 리스트반복 -->
+            <tr>
+              <td class="text-center">10</td>
+              <td class="text-left"><a href="ViewSkin.jsp">제목입니다</a></td>
+              <td class="text-center">작성자</td>
+              <td class="text-center">2020-04-24</td>
+              <td class="text-center">99</td>
+              <td class="text-center"><span class="glyphicon glyphicon-hdd"></td>
+            </tr>
+            <tr>
+              <td class="text-center">10</td>
+              <td class="text-left"><a href="ViewSkin.jsp">제목입니다</a></td>
+              <td class="text-center">작성자</td>
+              <td class="text-center">2020-04-24</td>
+              <td class="text-center">99</td>
+              <td class="text-center"><span class="glyphicon glyphicon-hdd"></td>
+            </tr>
+            <tr>
+              <td class="text-center">10</td>
+              <td class="text-left"><a href="ViewSkin.jsp">제목입니다</a></td>
+              <td class="text-center">작성자</td>
+              <td class="text-center">2020-04-24</td>
+              <td class="text-center">99</td>
+              <td class="text-center"><span class="glyphicon glyphicon-hdd"></td>
+            </tr>
+            <tr>
+              <td class="text-center">10</td>
+              <td class="text-left"><a href="ViewSkin.jsp">제목입니다</a></td>
+              <td class="text-center">작성자</td>
+              <td class="text-center">2020-04-24</td>
+              <td class="text-center">99</td>
+              <td class="text-center"><span class="glyphicon glyphicon-hdd"></td>
+            </tr>
+            <tr>
+              <td class="text-center">10</td>
+              <td class="text-left"><a href="ViewSkin.jsp">제목입니다</a></td>
+              <td class="text-center">작성자</td>
+              <td class="text-center">2020-04-24</td>
+              <td class="text-center">99</td>
+              <td class="text-center"><span class="glyphicon glyphicon-hdd"></td>
+            </tr>
+            <tr>
+              <td class="text-center">10</td>
+              <td class="text-left"><a href="ViewSkin.jsp">제목입니다</a></td>
+              <td class="text-center">작성자</td>
+              <td class="text-center">2020-04-24</td>
+              <td class="text-center">99</td>
+              <td class="text-center"><span class="glyphicon glyphicon-hdd"></td>
+            </tr>
+
+            <!-- <% } %> -->
+          </tbody>
+        </table>
+        <div class="text-right" style="margin-right: 58px;">
+          <button type="button" class="btn btn-light">Reset</button>
+          <button type="button" class="btn btn-outline-secondary">글쓰기</button>
+
+          <button type="button" class="btn btn-primary">수정하기</button>
+          <button type="button" class="btn btn-success">삭제하기</button>
+          <button type="button" class="btn btn-info">답글쓰기</button>
+          <button type="button" class="btn btn-warning text-light">리스트보기</button>
+          <button type="button" class="btn btn-danger">전송하기</button>
+        </div>
+        <div class="text-center">
+          <ul class="pagination justify-content-center" style="margin-right: 50px;">
+            <li class="page-item "><a class="page-link" href="#"><i class='far fa-hand-point-left'></i></a></li>
+            <li class="page-item "><a class="page-link" href="#"><i class='fas fa-fast-backward'></i></i></a></li>
+            <li class="page-item"><a class="page-link" href="#page=1">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#page=2">2</a></li>
+            <li class="page-item"><a class="page-link" href="#page=3">3</a></li>
+            <li class="page-item"><a class="page-link" href="#page=3">4</a></li>
+            <li class="page-item"><a class="page-link" href="#page=3">5</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class='fas fa-fast-forward'></i></a></li>
+            <li class="page-item "><a class="page-link" href="#"><i class='far fa-hand-point-right'></i></a></li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+    <table>
+      <tr>
+        <span style="font-weight: bold; margin-left: 400px; ">Email : kimdaeun627@naver.com &nbsp; Mobile:010-7554-0482&nbsp; Address : 덕소
+        </span><br><span style="font-weight: bold; margin-left: 440px; ">copyright@2020한국소프트웨어인재개발원.All right reserved </span></td>
+      
+      </tr>
+      <tr>
+        <td class="ml-left" style="font-size: 30px;">닉네임<span style="font-size: 13px; font-weight: bold; vertical-align: text-top;">TM</span></td>
+      </tr>
+    </table>
+
+  </div>
+</body>
+
+</html>

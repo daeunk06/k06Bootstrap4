@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    /* jQuery를 페이지에서 사용하기 위해 core파일은 cdn으로 삽입하고
+     해당 문서의 로딩이 끝난 후 제이쿼리를 사용할수 있도록 선언하는 문장
+   여기서$는 제이쿼리 대체기호다 */
+    $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+      //팝오버
+      $('[data-toggle="popover"]').popover();
+
+      //토스트-버튼클릯 보여짐
+      $("#myBtn").click(function () {
+        $('.toast').toast('show');
+      });
+      
+      //토스트- 문서의 로드가 끝나면 즉시 보여짐
+      $('.toast2').toast('show');
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <h3>Tooltip Example</h3>
+    <a href="#" data-toggle="tooltip" title="Tooltip이 뜨네요..!">마우스를 올려보세욥</a>
+
+    <h3>Tooltip Example</h3>
+    <p>Tooltip이 뜨는 위치를 설정할 수 있다</p>
+    <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a>
+    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a>
+    <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a>
+    <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a>
+
+    <h3>Popover Example</h3>
+    <a href="#" data-toggle="popover" title="Popover 의 제목입니당" data-content="팝오버의 내용입니다.">
+      Toggle popover</a>
+
+    <br>
+    <a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Click-top</a>
+    <a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Click-bottom</a>
+    <a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Click-left</a>
+    <a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Click-right</a>
+
+    <br>
+    <h2>팝오버클릭시 닫히는 효과</h2>
+    <a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus"
+      data-content="나 누르면 사라진다아ㅏㅇ">Click me</a>
+
+    <h2>토스트</h2>
+    <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
+
+    <div class="toast">
+      <div class="toast-header">
+        Toast Header
+      </div>
+      <div class="toast-body">
+        Some text inside the toast body
+      </div>
+    </div>
+
+    <div class="toast2" data-autohide="false">
+      <div class="toast-header">
+        <strong class="mr-auto text-primary">Toast Header</strong>
+        <small class="text-muted">5 mins ago</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+      </div>
+      <div class="toast-body">
+        Some text inside the toast body
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</body>
+
+</html>
